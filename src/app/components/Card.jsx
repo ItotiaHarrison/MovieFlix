@@ -18,9 +18,7 @@ export default function Card({result}) {
             }}
             placeholder='blur'
             blurDataURL='/spinner.svg'
-            >
-
-            </Image>
+            ></Image>
 
             <div className="p-2">
                 <p className='line-clamp-2 text-md'>{result.overview}</p>
