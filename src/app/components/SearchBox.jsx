@@ -18,10 +18,10 @@ export default function SearchBox() {
         <form 
         className='flex max-w-xl mx-auto items-center px-5 ' onSubmit={handleSubmit}>
             <input type="text" 
-            placeholder='Which movie?...' 
+            placeholder='Looking for...' 
             value={search} 
-            onChange={(e) => setSearch(e.target.value)} className='w-full outline h-7 rounded-sm placeholder-gray-500 bg-transparent flex-1' />
-            <button disabled={!search} type="submit" className='text-amber-600 disabled:text-gray-400'><AiOutlineSearch/></button>
+            onChange={(e) => setSearch(e.target.value)} className='w-full outline p-2 h-7 rounded-sm placeholder-gray-500 bg-transparent flex-1' />
+            <button disabled={!search} type="submit" className='text-red-600 p-2 disabled:text-gray-400'><AiOutlineSearch/></button>
         </form>
     )
 }

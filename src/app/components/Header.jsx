@@ -12,18 +12,16 @@ export default function Header() {
 
         <Link href="/">
           <h2 className='text-2xl'>
-            <span className='font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1'>Movie</span>
-            <span className='text-xl hidden sm:inline'>Flix</span></h2>
+            <span className='font-bold bg-red-700 py-1 px-2 rounded-lg mr-1'>Movie</span>
+            <span className='text-xl hidden sm:inline'>Box</span></h2>
         </Link>
       </div>
 
 
-      <div className="flex">
-        <DarkModeSwitch className="mx-2"/>
-        <Signin className="mx-2"/>
-        <div className="mx-2">
-          <GiHamburgerMenu/>
-        </div>
+      <div className="flex items-center">
+        <DarkModeSwitch className="p-2" />
+        <Signin className="mx-5" />
+        <GiHamburgerMenu className='mx-5 cursor-pointer' />
       </div>
 
 
