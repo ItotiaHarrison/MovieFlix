@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function SearchBox() {
     const [search, setSearch] = useState('');
@@ -15,12 +16,12 @@ export default function SearchBox() {
 
     return (
         <form 
-        className='flex max-w-6xl mx-auto justify-between items-center px-5 ' onSubmit={handleSubmit}>
+        className='flex max-w-xl mx-auto items-center px-5 ' onSubmit={handleSubmit}>
             <input type="text" 
-            placeholder='Search keywords...' 
+            placeholder='Which movie?...' 
             value={search} 
-            onChange={(e) => setSearch(e.target.value)} className='w-full h-14 rounded-sm placeholder-gray-500 outline-none bg-transparent flex-1' />
-            <button disabled={!search} type="submit" className='text-amber-600 disabled:text-gray-400'>Search</button>
+            onChange={(e) => setSearch(e.target.value)} className='w-full outline h-7 rounded-sm placeholder-gray-500 bg-transparent flex-1' />
+            <button disabled={!search} type="submit" className='text-amber-600 disabled:text-gray-400'><AiOutlineSearch/></button>
         </form>
     )
 }
