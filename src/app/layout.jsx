@@ -1,7 +1,6 @@
 import Providers from "./Providers";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import SearchBox from "./components/SearchBox";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -19,8 +18,6 @@ export default function RootLayout({ children }) {
         <Providers>
           
           <Header />
-
-          <SearchBox />
 
           {children}
 

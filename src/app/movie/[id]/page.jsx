@@ -13,6 +13,7 @@ export default async function MoviePage({ params }) {
 
     const movieId = params.id;
     const movie = await getMovie(movieId);
+    
 
     return (
         <div className='w-full'>
@@ -31,19 +32,19 @@ export default async function MoviePage({ params }) {
                 ></Image>
 
                 <div className="p-2">
-                    <h2 className='text-lg mb-3 font-bold'>{movie.title || movie.name}</h2>
+                    <h2 className='text-lg mb-3 font-bold' data-testid='movie-title'>{movie.title || movie.name}</h2>
 
-                    <p className='text-lg mb-3'>
+                    <p className='text-lg mb-3' data-testid='movie-overview'>
                         <span className='font-semibold mr-1'>Overview:</span>
                         {movie.overview}
                     </p>
 
                     <p className='mb-3'>
-                        <span className='font-semibold mr-1'>Date Released:</span>
+                        <span className='font-semibold mr-1' data-testid='movie-release-date'>Date Released:</span>
                         {movie.release_date || movie.first_air_date}
                     </p>
 
-                    <p className='mb-3'>
+                    <p className='mb-3' data-testid='movie-runtime'>
                         <span className='font-semibold mr-1'>Length:</span>
                         {movie.runtime || movie.episode_run_time} minutes
                     </p>
